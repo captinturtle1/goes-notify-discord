@@ -1,5 +1,6 @@
-FROM python:2.7.16-alpine
-RUN pip install requests twilio
+FROM python:3.10-slim
 WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-ENTRYPOINT ["python", "goes-notify.py", "--config=/app/config.json"]
+CMD ["python", "-u", "app.py"]
