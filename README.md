@@ -38,11 +38,34 @@ This application parses the interview scheduler for Global Entry and notifies yo
 ## Running the Application
 
 - **Locally**
+    1. **Set up virtual environment:**
 
-    Run the application locally by executing this command in the project directory:
-    ```
-    python app.py
-    ```
+        Create a virtual environment in the project directory:
+        ```
+        python -m venv .venv
+        ```
+
+    2. **Activate the virtual environment:**
+
+        - On Windows:
+            ```
+            .\venv\Scripts\activate
+            ```
+        
+        - On macOS/Linux
+            ```
+            source venv/bin/activate
+            ```
+
+    3. **Install dependencies:**
+        ```
+        pip install -r requirements.txt
+        ```
+
+    4. **Run the application**
+        ```
+        python app.py
+        ```
 
 - **Docker**
 
